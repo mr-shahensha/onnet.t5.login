@@ -12,7 +12,7 @@ include("connection.php");
 </head>
 <body>
     <h1>login page</h1>
-    <form action="logic.php" method="post" onsubmit="return validation()">
+    <form action="logic2.php" method="post" onsubmit="return validation()">
         <table border="2">
             <tr>
                 <td><input type="text" placeholder="enter username" name="uname" id="uname_id" onkeyup="hidewarn(this.value)"></td>

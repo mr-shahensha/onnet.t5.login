@@ -16,7 +16,12 @@ if(isset($_POST['submit'])){
         $pass=$_REQUEST['pass'];
     }
 
-    $checkbox=$_REQUEST['checkbox'];
+    if(isset($_REQUEST['checkbox'])){
+        $checkbox=$_REQUEST['checkbox'];
+    }
+    else{
+        $checkbox='';
+    }
 
     $query=mysqli_query($con,"select * from login where uname='$uname'");
     while($result=mysqli_fetch_assoc($query)){
@@ -33,7 +38,7 @@ if(isset($_POST['submit'])){
                 setcookie("rememberCookiePassword",md5($pass),(time()+604800));
                 echo "Login Successfully.";
 			}
-            
+
         }else{
             ?>
             <script>
