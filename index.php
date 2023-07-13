@@ -12,7 +12,7 @@ include("connection.php");
 </head>
 <body>
     <h1>login page</h1>
-    <form action="logic2.php" method="post" onsubmit="return validation()">
+    <form action="logic.php" method="post" onsubmit="return validation()">
         <table border="2">
             <tr>
                 <td><input type="text" placeholder="enter username" name="uname" id="uname_id" onkeyup="hidewarn(this.value)"></td>
@@ -27,7 +27,7 @@ include("connection.php");
             </tr>
         </table>
         <input type="checkbox" name="checkbox" id="" value="1">remember me
-        <p id="warn" style="color:red;"></p>
+        <p id="warn" style="color:red;"> </p>
         <p id="warn2" style="color:red;"></p>
     </form>
 </body>
@@ -50,7 +50,7 @@ include("connection.php");
     }
     function hidewarn(a){
         if(a!=''){
-        document.getElementById("warn").innerHTML = "";
+        document.getElementById("warn").  = "";
         }
     }
     function hidewarn2(a){
