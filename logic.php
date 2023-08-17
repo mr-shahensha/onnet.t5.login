@@ -27,7 +27,7 @@ if(isset($_POST['submit'])){
     while($result=mysqli_fetch_assoc($query)){
         $action=$result['action'];
         $db_pass=md5($result['pass']);
-        $cookie_name=$result['uname'];
+        // $cookie_name=$result['uname'];
     }
 
     if($action==0){
